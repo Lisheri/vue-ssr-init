@@ -15,7 +15,6 @@
 import { defineComponent, ref } from 'vue';
 export default defineComponent({
   setup() {
-    console.info('fuck')
     const message = ref('测试message');
     const onClick = () => {
       console.info('点击')
