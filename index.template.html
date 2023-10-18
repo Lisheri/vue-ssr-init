@@ -6,10 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- 使用三个大括号直接原文输出, 而不是处理为字符串 -->
         {{{ meta }}}
+        <link rel="stylesheet" href="https://unpkg.com/element-ui@{{ version }}/lib/theme-chalk/index.css">
         <title>{{ title }}</title>
       </head>
       <body>
         <!-- 这个注释是个特殊标记, 作为Vue的模板入口 -->
         <!--vue-ssr-outlet-->
+        <script src="https://unpkg.com/element-ui@{{ version }}/lib/index.js"></script>
       </body>
       </html>

@@ -5,7 +5,9 @@
     <div>
       <input v-model="message" />
     </div>
-    <button @click="onClick">测试点击</button>
+    <el-button @click="onClick">测试点击</el-button>
+    <el-divider></el-divider>
+    <a-aaa>111</a-aaa>
   </div>
 </template>
 
@@ -14,7 +16,7 @@ import { defineComponent, ref } from 'vue';
 export default defineComponent({
   setup() {
     console.info('fuck')
-    const message = ref('日你的吗');
+    const message = ref('测试message');
     const onClick = () => {
       console.info('点击')
     }

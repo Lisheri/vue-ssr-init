@@ -55,13 +55,15 @@ if (isProd) {
 
 // 路由处理渲染函数
 const render = (req, res) => {
+  const version = req?.query?.version || '2.15.14';
   // 此处无需创建实例, 会找到entry-server, 然后调用其中的方法得到vue实例, 再来渲染, renderer会自动完成这个事情
   renderer.renderToString({
     // 设置页面标题
-    title: 'fuck you',
+    title: '测试ssr标题',
     meta: `
       <meta name="description" content="fuck" >
-    `
+    `,
+    version
   }, (err, html) => {
     if (err) {
       // 服务端报错

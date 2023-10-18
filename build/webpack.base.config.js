@@ -69,5 +69,8 @@ module.exports = {
   plugins: [
     new VueLoaderPlugin(),
     new FriendlyErrorsWebpackPlugin()
-  ]
+  ],
+  externals: {
+    ElementUI: 'element-ui'
+  }
 }
