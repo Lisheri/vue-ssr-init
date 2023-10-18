@@ -1,6 +1,12 @@
 module.exports = {
-  presets: ["@vue/cli-plugin-babel/preset"],
-  plugins: [
-    ["import", { "libraryName": "ant-design-vue", "libraryDirectory": "es", "style": 'css' }] // `style: true` 会加载 less 文件
-  ]
-};
+  presets: [['@vue/cli-plugin-babel/preset', {
+    // polyfills: [
+    //   'es.array.iterator',
+    //   'es.object.assign',
+    //   'es.promise',
+    //   'es.promise.finally',
+    //   'es.array.find',
+    // ],
+  }], '@babel/preset-env'],
+  plugins: ['@babel/plugin-transform-runtime'],
+}

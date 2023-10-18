@@ -1,6 +1,7 @@
-const { merge } = require('webpack-merge');
-const baseConfig = require('./webpack.base.config');
-const VueSSRClientPlugin = require('vue-server-renderer/client-plugin');
+const { merge } = require('webpack-merge')
+const baseConfig = require('./webpack.base.config')
+const VueSSRClientPlugin = require('vue-server-renderer/client-plugin')
+const path = require('path')
 
 module.exports = merge(baseConfig, {
   entry: {
@@ -12,7 +13,8 @@ module.exports = merge(baseConfig, {
       // ES6 -> ES5
       {
         test: /\.m?js$/,
-        exclude: /(node_modules|bower_components)/,
+        // exclude: /(node_modules|bower_components)/,
+        include: [path.resolve(__dirname, '../src')],
         use: {
           loader: 'babel-loader',
           options: {

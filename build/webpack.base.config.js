@@ -2,7 +2,7 @@
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const path = require('path');
 // 提供打包日志
-const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
+// const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const resolve = file => path.resolve(__dirname, file)
 
 const isProd = process.env.NODE_ENV === 'production'
@@ -68,7 +68,7 @@ module.exports = {
   },
   plugins: [
     new VueLoaderPlugin(),
-    new FriendlyErrorsWebpackPlugin()
+    // new FriendlyErrorsWebpackPlugin()
   ],
   externals: {
     ElementUI: 'element-ui'
